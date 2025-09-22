@@ -11,35 +11,49 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css"
+    />
     <title>Menu</title>
   </head>
+
   <body>
     <nav>
-      <img
-        src="./assets/img/ChatGPT_Image_Sep_19__2025__10_56_37_PM-removebg-preview 2.png"
-        alt=""
-      />
+      <img src="./assets/img/fitbites.png" alt=" " />
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Favorites</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">What we offers</a></li>
+        <li><a href="./index.html ">Home</a></li>
+        <li><a href="./Menu.html">Menu</a></li>
+        <li><a href="# ">Favorites</a></li>
+        <li><a href="# ">Contact</a></li>
+        <li><a href="# ">What we offers</a></li>
       </ul>
       <div class="btn">
-        <img src="./assets/img/cart.png" alt="" />
-        <button>Login</button>
+        <a href="./cart.html"> <img src="./assets/img/cart.png " alt=" " /></a>
+        <a href="./login.html"><button>Login</button></a>
       </div>
     </nav>
     <main>
       <div class="filters">
-        <button>All Things</button>
-        <button>Foods</button>
-        <button>Snacks</button>
-        <button>Drinks</button>
+        <button onclick="filterItems('all')">All Things</button>
+        <button onclick="filterItems('food')">Foods</button>
+        <button onclick="filterItems('snacks')">Snacks</button>
+        <button onclick="filterItems('drinks')">Drinks</button>
       </div>
       <div class="cards"></div>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p>&copy; 2025 Healthy Life. All rights reserved.</p>
+        </div>
+      </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
     <script src="./assets/script/menu.js"></script>
   </body>
 </html>

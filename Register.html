@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+     <link rel="stylesheet" href="./assets/style/Register.css">
+</head>
+<body>
+        <section>
+                             
+    <!-- الدوائر العادية  -->
+    <div class="background-shape shape-bottom-left"></div>
+    <div class="background-shape shape-bottom-right"></div>
+    <div class="background-shape shape-top-right"></div>
+    
+    <!--   الدوائر المفرغة  -->
+    <div class="shape-corner corner-1"></div>
+    <div class="shape-corner corner-2"></div>
+    
+    <div class="container">
+        <!-- div container: نموذج التسجيل -->
+        <div class="form-container">
+            <div class="header">
+                <h1>Register</h1>
+               
+            </div>
+            
+            <form>
+                <!-- div 1: الاسم الأول والاسم الأخير -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName"></label>
+                        <input type="text" id="firstName" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName"> </label>
+                        <input type="email" id="email" placeholder=" Your Email " required>
+                    </div>
+                </div>
+                
+                <!-- div 2 : كلمة المرور وتأكيدها -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password"> </label>
+                        <input type="password" id="password" placeholder="Password Confirmation" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">  </label>
+                        <input type="password" id="confirmPassword" placeholder="Password" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-register">Register</button>
+                
+                <div class="login-link">
+                    <a href="./login.html">Sign In</a> ? Already have an account
+                </div>
+            </form>
+        </div>
+    </div>
+
+        </section>
+
+    <!-- java sicrebt -->
+     <script src="./assets/script/Register.js"></script>
+</body>
+</html>

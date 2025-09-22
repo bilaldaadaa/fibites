@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.css" />
+    <link rel="stylesheet" href="./assets/style/cart.css">
+</head>
+
+<body>
+    <nav>
+        <img src="./assets/img/fitbites.png" alt=" " />
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Menu.html">Menu</a></li>
+            <li><a href="./fav.html">Favorites</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#Offers">What we offers</a></li>
+        </ul>
+        <div class="btn">
+            <a href="./cart.html"><img src="./assets/img/cart.png " alt=" " /></a>
+            <a href="./login.html"><button>Login</button></a>
+        </div>
+    </nav>
+    <div class="cart">
+        <h2> Shopping Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <tr data-price="5">
+                    <td><img src="./assets/img/2bc54ab609fc9d71785c17a39fb2587e.jpg" alt="">
+                        <P>Avocado Toast With Eggs</P>
+                    </td>
+                    <td>
+                        <button class="minus">-</button>
+                        <span class="quantity">2</span>
+                        <button class="plus">+</button>
+                    </td>
+                    <td class="item-total">5$</td>
+                    <td><button class="delete">🗑</button></td>
+                </tr>
+                <tr data-price="25">
+                    <td><img src="./assets/img/drink.jpg" alt="">
+                        <P>Strawberry Smoothie</P>
+                    </td>
+                    <td>
+                        <button class="minus">-</button>
+                        <span class="quantity">3</span>
+                        <button class="plus">+</button>
+                    </td>
+                    <td class="item-total">25$</td>
+                    <td><button class="delete">🗑</button></td>
+                </tr>
+                <tr data-price="20">
+                    <td><img src="./assets/img/shrimpmeal.jpg" alt="">
+                        <P>Garilled Shirmp with sweet potato and Asparagus</P>
+                    </td>
+                    <td>
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </td>
+                    <td class="item-total">20$</td>
+                    <td><button class="delete">🗑</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <div class="voucher-container">
+                <input type="text" id="voucher" placeholder="Discount Voucher">
+                <button id="apply-voucher">Apply</button>
+            </div>
+            <p id="voucher-msg" class="voucher-msg"></p>
+            <p>Sub Total: <span id="sub-total">0$</span></p>
+            <p>Discount: <span id="discount">0$</span></p>
+            <p>Delivery: <span id="delivery">5$</span></p>
+            <h4>Total: <span id="total">0$</span></h4>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 Healthy Life. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./assets/script/cart.js"></script>
+</body>
+
+</html>

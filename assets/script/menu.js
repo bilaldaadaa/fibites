@@ -114,13 +114,13 @@ function filterItems(category) {
           <div class="proten">${e.Protein}</div>
           <img src="${e.img}" alt="${e.name}" />
           <div class="content">
-            <p>${e.name}</p>
+            <h4>${e.name}</h4>
             <p>${e.desc}</p>
             <p class="price">Price: ${e.price}</p>
           </div>
           <div class="btn">
             <button class="add" >Add to cart</button>
-            <a href="../../details.html?id=${e.id}"><button>More details</button></a>
+            <a href="../../detailes.html?id=${e.id}"><button>More details</button></a>
             <span class="fav"><i class="fa-solid fa-heart"></i></span>
           </div>
         </div>`;
@@ -135,7 +135,7 @@ function filterItems(category) {
       notyf.success("Item added successfully!");
     });
   });
-    const fav = document.querySelectorAll(".fav");
+  const fav = document.querySelectorAll(".fav");
   fav.forEach(btn => {
     btn.addEventListener("click", () => {
       notyf.success("Item added to your favorite!");

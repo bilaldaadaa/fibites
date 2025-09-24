@@ -262,3 +262,36 @@ main .cards .card span {
 main .cards .card span:hover i {
     color: #ff9800;
 }
+
+.main-footer {
+    margin-top: 100px;
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+.main-footer p {
+    font-size: 14px;
+}

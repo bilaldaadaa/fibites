@@ -240,10 +240,11 @@ button {
     border-radius: 8px;
     background: #28a745;
     color: white;
+
 }
 
 #checkout {
-    width: 15%;
+    width: 120px;
     padding: 12px;
     margin-top: 10px;
     border: none;

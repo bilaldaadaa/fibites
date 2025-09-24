@@ -142,4 +142,17 @@ function filterItems(category) {
     });
   });
 }
+
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.querySelector(".fa-bars");
+const closeBtn = document.querySelector(".close-btn");
+
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
 filterItems("all");
+

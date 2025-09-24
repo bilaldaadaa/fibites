@@ -1,38 +1,38 @@
 const Menu = [
-    {
-        id: 1,
-        img: "/assets/img/menu1.jpg",
-        name: "Beef stir-fry",
-        Protein: "30g of Protein",
-        desc: "Beef with vegetables and soy sauce",
-        price: "30 $",
-        category: "food"
-    },
-    {
-        id: 2,
-        img: "/assets/img/menu2.jpg",
-        name: "Salmon",
-        Protein: "20g of Protein",
-        desc: "Salmon with Brown rice and Spinach",
-        price: "20 $",
-        category: "food"
-    },
-    {
-        id: 3,
-        img: "/assets/img/menu3.jpg",
-        name: "Avocado toast with eggs",
-        Protein: "12g of Protein",
-        desc: "golden toast with a perfectly cooke egg",
-        price: "10 $",
-        category: "food"
-    },
+  {
+    id: 1,
+    img: "/assets/img/menu1.jpg",
+    name: "Beef stir-fry",
+    Protein: "30g of Protein",
+    desc: "Beef with vegetables and soy sauce",
+    price: "30 $",
+    category: "food"
+  },
+  {
+    id: 2,
+    img: "/assets/img/menu2.jpg",
+    name: "Salmon",
+    Protein: "20g of Protein",
+    desc: "Salmon with Brown rice and Spinach",
+    price: "20 $",
+    category: "food"
+  },
+  {
+    id: 3,
+    img: "/assets/img/menu3.jpg",
+    name: "Avocado toast with eggs",
+    Protein: "12g of Protein",
+    desc: "golden toast with a perfectly cooke egg",
+    price: "10 $",
+    category: "food"
+  },
 ];
 
 const cards = document.querySelector(".cards")
 
 let card = "";
 Menu.forEach(e => {
-    card += `
+  card += `
         <div class="card">
           <div class="proten">${e.Protein}</div>
           <img src="${e.img}" alt="${e.name}" />
@@ -115,24 +115,24 @@ document.body.appendChild(overlay);
 
 
 showFormBtn.addEventListener("click", () => {
-    popup.style.display = "block";
-    overlay.style.display = "block";
+  popup.style.display = "block";
+  overlay.style.display = "block";
 });
 
 document.getElementById("popupCloseBtn").addEventListener("click", () => {
-    popup.style.display = "none";
-    overlay.style.display = "none";
+  popup.style.display = "none";
+  overlay.style.display = "none";
 });
 
 
 document.getElementById("popupAddBtn").addEventListener("click", () => {
-    const title = document.getElementById("popupTitle").value;
-    const desc = document.getElementById("popupDesc").value;
+  const title = document.getElementById("popupTitle").value;
+  const desc = document.getElementById("popupDesc").value;
 
-    if (title && desc) {
-        const newCard = document.createElement("div");
-        newCard.className = "card";
-        newCard.innerHTML = `
+  if (title && desc) {
+    const newCard = document.createElement("div");
+    newCard.className = "card";
+    newCard.innerHTML = `
       <div class="content">
         <h4>${title}</h4>
         <p>${desc}</p>
@@ -143,23 +143,35 @@ document.getElementById("popupAddBtn").addEventListener("click", () => {
         <span class="fav"><i class="fa-solid fa-heart"></i></span>
       </div>
     `;
-        cards.appendChild(newCard);
-        document.querySelectorAll(".fav").forEach(fav => {
-            fav.addEventListener("click", function () {
-                this.closest(".card").remove();
-            });
-        });
-        document.getElementById("popupTitle").value = "";
-        document.getElementById("popupDesc").value = "";
-        popup.style.display = "none";
-        overlay.style.display = "none";
-    }
+    cards.appendChild(newCard);
+    document.querySelectorAll(".fav").forEach(fav => {
+      fav.addEventListener("click", function () {
+        this.closest(".card").remove();
+      });
+    });
+    document.getElementById("popupTitle").value = "";
+    document.getElementById("popupDesc").value = "";
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
 });
 
 document.querySelectorAll(".fav").forEach(fav => {
-    fav.addEventListener("click", function () {
-        this.closest(".card").remove();
-    });
+  fav.addEventListener("click", function () {
+    this.closest(".card").remove();
+  });
+});
+
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.querySelector(".fa-bars");
+const closeBtn = document.querySelector(".close-btn");
+
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
 });
 
 
